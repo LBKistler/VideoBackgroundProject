@@ -1,0 +1,129 @@
+/* Importing/Linking to the Nunito Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quintessential&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Philosopher&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    /* box-sizing: border-box includes padding and border when setting a width or height */
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.5;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+a {
+    /* Removes the underline on a link */
+    text-decoration: none;
+    color: #4b5163;
+}
+
+#main {
+    position: relative;
+    /* VH (Viewport Height) determines the height of the element by setting it to a percentage of the viewport (NOTE: VW is used for width) */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    /* justify-content: center; */
+    /* align-items: center; */
+
+    /* align-content: center; */
+/* same as setrting center to justify - content and align items  */
+    place-items: center;
+    padding: 0 20px;
+}
+#video-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("media/cover.png");
+    background-repeat: no repeat;
+    background-position: center;
+    background-size: cover;
+}
+video{
+    position: absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   /* the object-fit property determines how a video or image (AKA img element) is resized to fit inside its container (AKA parent element), setting the value to "cover" causes the video to retain its aspect ration and fill the given dimention */
+   object-fit: cover;
+}
+#cover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(000, 000, 000, 0.5);
+}
+#content{
+    color: white;
+    z-index: 2;
+    text-align: center;
+}
+#click{
+    /* Inline-block allows you to set top and bottom margin as well as width and height. this is no the case with using just inline */
+    display: inline-block;
+    margin-top: 25px;
+    border: 4px solid white;
+    padding: 5px 15px;
+    background-color: #56585f;
+    /* A elements will NOT inherit text color like other text elements will. Must be applied directly */
+    color: white;
+    border-radius: 100px;
+    /* the larger the border radius number, the more round the edges */
+    font-size: 25px;
+    opacity: 0.9;
+}
+#click:hover{
+    /* changes the size of an element */
+    transform: scale(0.90);
+}
+#about{
+    padding: 50px;
+    text-align: center;
+}
+#about p{
+    /* ids are hashtags! as far as spaces or colons, those will vary */
+    font-size: 20px;
+    max-width: 700px;
+    margin: auto;
+    color: black;
+}
+#about h2{
+    /* since this is the only h2 as of now, we don't need the #about before h2, however, keeping it specific helps if we go back and add another h2 somewhere along the line */
+    margin: 40px 0;
+    color: #4b5163;
+}
+#content h1{
+    /* just effects the h1 in the content section, i.e. our name (go get a new font family for that */
+    /* font-family: 'Righteous', cursive; */
+    /* font-family: 'Quintessential', cursive; */
+    /* font-family: 'Philosopher', sans-serif; */
+    font-family: 'Alice', serif;
+    
+}
+i{
+    font-size: 30px;
+    margin: 0 10px;
+    color: rgb(48, 51, 148);
+}
+#about h1{
+    color: #4b5163;
+}
